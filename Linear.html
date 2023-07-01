@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var matrizFisicaLinear = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+         document.write(eval(prompt("Matriz")))
+
+        document.write(matrizFisicaLinear[0][0]);
+        document.write(matrizFisicaLinear[1][2]);
+        document.write(matrizFisicaLinear[2][1]);
+
+        for (var i = 0; i < matrizFisicaLinear.length; i++) {
+            for (var j = 0; j < matrizFisicaLinear[i].length; j++) {
+                document.write(matrizFisicaLinear[i][j]);
+            }
+        }
+
+        matrizFisicaLinear[1][1] = 10;
+        document.write(matrizFisicaLinear[1][1]);
+
+        
+    </script>
+</body>
+</html>

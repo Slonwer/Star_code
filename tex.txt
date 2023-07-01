@@ -1,0 +1,199 @@
+// Criação das variáveis locais utilizadas nesse script
+var USUARIO = "Vaamonde";
+var USUARIOS = "Usuários";
+var TESTE01 = (A === B ? 0 : 1);
+var TESTE02 = (typeof require !== 'undefined' && require('fs').existsSync('/etc/passwd') ? 0 : 1);
+var DATE = new Date().toLocaleString();
+var MENU_EXIBICAO = "Menu de exibição";
+var MENU_DIA_HORA = "Menu de dia e hora";
+var SAIR = "Sair";
+
+// Utilizando o comando console.log para imprimir os valores das variáveis locais e variáveis especiais
+console.log("Impressão na tela.............: Olá Mundo!!!");
+console.log("Nome do usuário...............: " + USUARIO);
+console.log("Nome do arquivo shell.........: " + process.argv[1]);
+console.log("Quantidade de parâmetros......: " + process.argv.length);
+console.log("Todos os parâmetros...........: " + process.argv.slice(2).join(" "));
+console.log("Parâmetro 01..................: " + process.argv[2]);
+console.log("Parâmetro 02..................: " + process.argv[3]);
+console.log("Status do comando anterior....: " + TESTE01);
+console.log("PID do processo...............: " + process.pid);
+console.log("Usuário logado................: " + USUARIOS);
+console.log("Comando: test A == B..........: " + TESTE01);
+console.log("Comando: test -f /etc/passwd..: " + TESTE02);
+console.log(MENU_EXIBICAO);
+console.log(MENU_DIA_HORA);
+console.log(SAIR);
+
+//---------File---------#
+console.log("Home file: " + process.argv[1]);
+console.log("Primeiro parâmetro: " + process.argv[2]);
+console.log("Todos os Parâmetros: " + process.argv.slice(2).join(" "));
+console.log("Número de parâmetros: " + (process.argv.length - 2));
+console.log("Números deste processo: " + process.pid);
+
+// Utilizando o comando if para fazer os testes lógicos
+if (USUARIO === "root") {
+  console.log("Teste de usuário..............: Usuário é root.");
+} else if (USUARIO === "admin") {
+  console.log("Teste de usuário..............: Usuário é admin.");
+} else {
+  console.log("Teste de usuário..............: Usuário não é root ou admin.");
+}
+
+// Utilizando o comando if encadeado para aumentar os testes lógicos
+if (TESTE01 === 0) {
+  console.log("Resultado do comando test é...: VERDADEIRO");
+} else if (TESTE01 === 1) {
+  console.log("Resultado do comando test é...: FALSO");
+} else {
+  console.log("Resultado do comando test é...: NÃO IDENTIFICADO");
+}
+
+// Utilizando o comando switch para fazer os testes lógicos
+switch (TESTE01) {
+  case 0:
+    console.log("Resultado do comando switch é: 0 - VERDADEIRO");
+    break;
+  case 1:
+    console.log("Resultado do comando switch é: 1 - FALSO");
+    break;
+  default:
+    console.log("Resultado do comando switch é: NÃO IDENTIFICADO");
+    break;
+}
+
+// Utilizando o comando switch com entrada do usuário
+var LETRAS = prompt("Digite as letras: A, B ou C...");
+switch (LETRAS.toLowerCase()) {
+  case "a":
+    console.log("A letra digitada foi..........: " + LETRAS);
+    break;
+  case "b":
+    console.log("A letra digitada foi..........: " + LETRAS);
+    break;
+  case "c":
+    console.log("A letra digitada foi..........: " + LETRAS);
+    break;
+  default:
+    console.log("Letra digitada incorretamente.: " + LETRAS);
+    break;
+}
+
+// Utilizando o loop for para verificar os números digitados pelo usuário
+var NUMEROS = prompt("Uma sequência de números......: ").split(" ");
+for (var i = 0; i < NUMEROS.length; i++) {
+  console.log("Valores passados para o Loop..: " + NUMEROS[i]);
+}
+
+// Utilizando o loop for para gerar uma tabuada com base no número digitado pelo usuário
+var NUMERO = prompt("Digite um número da tabuada...: ");
+for (var i = 0; i <= 10; i++) {
+  console.log(NUMERO + " x " + i + "...: " + (NUMERO * i));
+}
+
+// Utilizando o loop while para alcançar os valores desejados com base nos números digitados pelo usuário
+var INICIO = parseInt(prompt("Digite um número de início....: "));
+var FIM = parseInt(prompt("Digite um número do fim.......: "));
+while (INICIO <= FIM) {
+  console.log("Valor de sequência numérica...: " + INICIO);
+  INICIO++;
+}
+
+//----------Data e hora------------//
+while (true) {
+  var entrada = parseInt(prompt("Qual a opção que você deseja?"));
+  if (entrada === 1) {
+    console.log("Bem-vindo!");
+    break;
+  } else if (entrada === 2) {
+    console.log(new Date());
+    break;
+  }
+}
+
+//-------------Home--file---------------//
+
+var file1 = "/path/to/file1";
+var file2 = "/path/to/file2";
+
+if (file1 === file2) {
+  console.log("Os arquivos " + file1 + " e " + file2 + " são iguais.");
+} else {
+  console.log("Os arquivos " + file1 + " e " + file2 + " são diferentes.");
+}
+
+var n1 = 10;
+var n2 = 20;
+
+if (n1 < n2) {
+  console.log(n1 + " é menor que " + n2);
+}
+
+console.log(n1 + " -lt");
+
+// Operador if-then
+if (comando) {
+  ...
+}
+
+if (file1 === file2) {
+  console.log("");
+}
+
+// Operador if-then-else
+if (comando) {
+  ...
+} else {
+  ...
+}
+
+if (fs.existsSync(file1)) {
+  console.log(file1 + " existe");
+} else {
+  console.log(file1 + " não existe");
+}
+
+// Operador if-then-elif-else
+if (comando1) {
+  ...
+} else if (comando2) {
+  ...
+} else {
+  ...
+}
+
+// Compara as variáveis n1 e n2
+if (n1 < n2) {
+  console.log(n1 + " < " + n2);
+} else if (n1 > n2) {
+  console.log(n1 + " > " + n2);
+} else {
+  console.log(n1 + " = " + n2);
+}
+
+// Operador switch
+switch (variável) {
+  case "string1":
+    ...
+    break;
+  case "string2":
+    ...
+    break;
+  default:
+    ...
+    break;
+}
+
+switch (opt) {
+  case "-c":
+    complete = 1;
+    break;
+  case "-s":
+    short = 1;
+    name = "";
+    break;
+  default:
+    console.log("opção " + opt + " desconhecida");
+    process.exit(1);
+}
