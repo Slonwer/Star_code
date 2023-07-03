@@ -30,6 +30,7 @@ echo "$MENU_EXIBICAO"
 echo "$MENU_DIA_HORA"
 echo "$SAIR"
 
+#-------Segunda parte da variaveis--------#
 #---------File---------#
 echo "Home file: $0"
 echo "Primeiro parâmetro: $1"
