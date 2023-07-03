@@ -10,6 +10,7 @@ DATE=$(date +"%d/%m/%Y - %H:%M:%S")
 MENU_EXIBICAO="Menu de exibição"
 MENU_DIA_HORA="Menu de dia e hora"
 SAIR="Sair"
+ADMIN="root"
 
 # Utilizando o comando echo para imprimir na tela os valores das variáveis locais
 # e variáveis especiais do Shell
@@ -44,6 +45,9 @@ elif [ "$USUARIO" == "admin" ]; then
 else
   echo "Teste de usuário..............: Usuário não é root ou admin."
 fi
+ if ["$ADMIN" == "Admin"]; then
+   echo "Agora você e um admin............"
+elif [ "$USUARIO" == "usuario" ]; then
 
 # Utilizando o comando if encadeado para aumentar os testes lógicos
 if [ "$TESTE01" -eq 0 ]; then
